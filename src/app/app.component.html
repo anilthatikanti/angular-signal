@@ -1,9 +1,20 @@
 <div>
-  {{counter()}}
   <button type="button" (click)="increament()">Increament</button>
+  <div>
+    <app-search-component
+    [(inputData)]="checked"
+    >
+    <!-- this is for model signal
+    Input field in child and variable in parent we can change the 
+    values without using event emits
+    -->
+    </app-search-component>
+    <!-- <input type="text" [ngModel]="checked()" (ngModelChange)="checked.set($event)" /> -->
+    <label>Toggle Status: {{ checked  }}</label>
   </div>
+
+</div>
 
   <hr/>
   <app-signal-sample>
-
   </app-signal-sample>
