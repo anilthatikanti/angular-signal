@@ -10,7 +10,8 @@ export class WebsocketService {
   dataMap: Map<number, liveData> = new Map<number, liveData>();
 
   constructor() {
-    this.ws = new WebSocket('wss://fg-data.investit.ai');
+    // this.ws = new WebSocket('wss://fg-data.investit.ai');
+    this.ws = new WebSocket('wss://data.investit.ai');
     this.ws.onopen = () => {
       console.log('WebSocket connection established');
       const message = {

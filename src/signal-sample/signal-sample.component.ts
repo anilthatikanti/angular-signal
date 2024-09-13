@@ -13,9 +13,6 @@ export class SignalSampleComponent {
   stockSignal = computed(()=>this.webSocketService.getStockSignal())
   
   constructor(private webSocketService: WebsocketService) {
-    effect(() => {
-      console.log('Signal updated:', this.stockSignal());
-    });
   }
   
   ngOnInit() {
